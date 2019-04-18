@@ -18,13 +18,20 @@ module.exports = {
     publicPath: "http://localhost:3000/dist",
     hotOnly: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new HtmlWebpackPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin()
+    // new webpack.ProvidePlugin({
+    //   System: "systemjs/dist/system.js"
+    // })
+  ],
   module: {
     rules: [
+      { parser: { system: false } },
       {
-        test: /.(js|jsx)$/,
-        exclude: /node_modules/,
+        test: /\.(js|jsx)$/,
         loader: "babel-loader",
+        exclude: /node_modules/,
         options: { presets: ["@babel/env"] }
       }
     ]

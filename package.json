@@ -10,8 +10,12 @@
   "author": "labikyo <labikyo@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
+    "@loadable/component": "^5.7.0",
     "systemjs": "^3.1.2",
     "webpack": "4.28.3",
     "webpack-cli": "^3.3.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0"
   }
 }
