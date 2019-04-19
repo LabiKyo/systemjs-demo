@@ -1,7 +1,9 @@
 console.log("hello from plugin A");
-import anotherFunction from "./anotherFile";
 
-export default function pluginA() {
+export default async function pluginA() {
   console.log("running pluginA");
-  anotherFunction();
+  anotherFunc = await import("./anotherFile");
+  anotherFunc();
 }
+
+pluginA();
