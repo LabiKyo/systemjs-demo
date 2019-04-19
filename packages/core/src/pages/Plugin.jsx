@@ -1,7 +1,7 @@
 import React from "react";
 
 console.log("Plugin.jsx");
-System.import("./pluginA.bundle.js").then(module => {
+System.import("pluginA").then(module => {
   console.log({ module });
   module.default();
 });
