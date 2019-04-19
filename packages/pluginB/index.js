@@ -1,8 +1,8 @@
-console.log("hello from plugin A");
+console.log("hello from plugin B");
 
 const pluginConfig = [
   {
-    id: "pluginA",
+    id: "pluginB",
     onload: () => import("./anotherFile")
   }
 ];
